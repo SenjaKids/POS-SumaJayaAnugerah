@@ -11,16 +11,17 @@ class SJACard extends StatelessWidget {
   final String? description;
   final String? topLabel, bottomLabel;
   final Color? topLabelColor, bottomLabelColor;
-  const SJACard(
-      {super.key,
-      this.image,
-      this.imageBorderRadius,
-      required this.title,
-      this.description,
-      this.topLabel,
-      this.bottomLabel,
-      this.topLabelColor,
-      this.bottomLabelColor});
+  const SJACard({
+    super.key,
+    this.image,
+    this.imageBorderRadius,
+    required this.title,
+    this.description,
+    this.topLabel,
+    this.bottomLabel,
+    this.topLabelColor,
+    this.bottomLabelColor,
+  });
 
   @override
   Widget build(BuildContext context) {

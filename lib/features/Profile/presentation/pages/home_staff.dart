@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
+import 'package:suma_jaya_anugerah/features/shared/widgets/sja_card.dart';
 
 class HomeStaffPage extends StatelessWidget {
   const HomeStaffPage({super.key});
@@ -140,6 +141,19 @@ class HomeStaffPage extends StatelessWidget {
                             style: SJATextStyle.bodyS(color: AppColor.blue_2),
                           ),
                         ],
+                      ),
+                      const SizedBox(height: 12),
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(
+                            context, '/tools-details-staff',
+                            arguments: 0),
+                        child: SJACard(
+                          image: 'default-picture.png',
+                          title: 'Bor Makita',
+                          description: 'Sejak: 12 Nov 2023',
+                          topLabel: 'Dipinjam',
+                          topLabelColor: AppColor.yellow,
+                        ),
                       ),
                     ],
                   ),

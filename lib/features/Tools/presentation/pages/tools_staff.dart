@@ -12,20 +12,28 @@ class ToolsStaffPage extends StatelessWidget {
       pageTitle: 'Alat Dipinjam',
       action1: 'add',
       content: Column(children: [
-        SJACard(
-          image: 'default-picture.png',
-          title: 'Bor Makita',
-          description: 'Sejak: 12 Nov 2023',
-          topLabel: 'Dipinjam',
-          topLabelColor: AppColor.yellow,
+        GestureDetector(
+          onTap: () => Navigator.pushNamed(context, '/tools-details-staff',
+              arguments: 0),
+          child: SJACard(
+            image: 'default-picture.png',
+            title: 'Bor Makita',
+            description: 'Sejak: 12 Nov 2023',
+            topLabel: 'Dipinjam',
+            topLabelColor: AppColor.yellow,
+          ),
         ),
         const SizedBox(height: 8),
-        SJACard(
-          image: 'default-picture.png',
-          title: 'Gunting Profesional Tajam',
-          description: 'Dikembalikan: 20 Sep 2023',
-          topLabel: 'Dikembalikan',
-          topLabelColor: AppColor.blue_3,
+        GestureDetector(
+          onTap: () => Navigator.pushNamed(context, '/tools-details-staff',
+              arguments: 1),
+          child: SJACard(
+            image: 'default-picture.png',
+            title: 'Gunting Profesional Tajam',
+            description: 'Dikembalikan: 20 Sep 2023',
+            topLabel: 'Dikembalikan',
+            topLabelColor: AppColor.blue_3,
+          ),
         ),
       ]),
       // content: ListView.separated(

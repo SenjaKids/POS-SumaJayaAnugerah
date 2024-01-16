@@ -20,9 +20,21 @@ class SJATextStyle {
         fontWeight: FontWeight.w600,
         color: color ?? AppColor.blue_1,
       );
+  static TextStyle titleS2({Color? color}) => TextStyle(
+        fontFamily: 'Poppins',
+        fontSize: 14,
+        fontWeight: FontWeight.w700,
+        color: color ?? AppColor.blue_1,
+      );
   static TextStyle subheadM({Color? color}) => TextStyle(
         fontFamily: 'Poppins',
         fontSize: 14,
+        fontWeight: FontWeight.w500,
+        color: color ?? AppColor.blue_1,
+      );
+  static TextStyle subheadL({Color? color}) => TextStyle(
+        fontFamily: 'Poppins',
+        fontSize: 18,
         fontWeight: FontWeight.w500,
         color: color ?? AppColor.blue_1,
       );
