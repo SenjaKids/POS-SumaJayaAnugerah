@@ -16,7 +16,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      initialRoute: '/nav-staff',
+      initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreenPage(),
         '/login': (context) => const LoginPage(),

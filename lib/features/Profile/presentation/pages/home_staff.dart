@@ -39,12 +39,16 @@ class HomeStaffPage extends StatelessWidget {
                             'PT. Suma Jaya Anugerah',
                             style: SJATextStyle.titleM(color: AppColor.white),
                           ),
-                          SvgPicture.asset(
-                            'assets/icons/ic-user-filled.svg',
-                            colorFilter: ColorFilter.mode(
-                                AppColor.white, BlendMode.srcIn),
-                            width: 24,
-                            height: 24,
+                          GestureDetector(
+                            onTap: () =>
+                                Navigator.pushNamed(context, '/profile'),
+                            child: SvgPicture.asset(
+                              'assets/icons/ic-user-filled.svg',
+                              colorFilter: ColorFilter.mode(
+                                  AppColor.white, BlendMode.srcIn),
+                              width: 24,
+                              height: 24,
+                            ),
                           )
                         ],
                       ),
