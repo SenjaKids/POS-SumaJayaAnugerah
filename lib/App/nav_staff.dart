@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:suma_jaya_anugerah/features/Profile/presentation/pages/home_staff.dart';
+import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_staff.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
 
@@ -16,13 +17,12 @@ class _NavStaffState extends State<NavStaff> {
   static const List<Widget> _widgetOptions = [
     HomeStaffPage(),
     Placeholder(),
-    Placeholder(),
+    ToolsStaffPage(),
     Placeholder(),
   ];
 
   @override
   Widget build(BuildContext context) {
-    // final ThemeData theme = Theme.of(context);
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: AppColor.blue_2,

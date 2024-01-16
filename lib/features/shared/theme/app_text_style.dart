@@ -17,7 +17,7 @@ class SJATextStyle {
   static TextStyle titleS({Color? color}) => TextStyle(
         fontFamily: 'Poppins',
         fontSize: 14,
-        fontWeight: FontWeight.w700,
+        fontWeight: FontWeight.w600,
         color: color ?? AppColor.blue_1,
       );
   static TextStyle subheadM({Color? color}) => TextStyle(

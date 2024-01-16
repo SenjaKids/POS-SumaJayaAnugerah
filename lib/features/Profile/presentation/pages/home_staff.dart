@@ -85,8 +85,6 @@ class HomeStaffPage extends StatelessWidget {
               //BOTTOM WHITE CONTAINER
               Expanded(
                 child: Container(
-                  width: double.maxFinite,
-                  height: double.maxFinite,
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   decoration: BoxDecoration(
                     color: AppColor.white,
