@@ -1,2 +1,2 @@
 // Boarding API
-const String EXAMPLE = 'EXAMPLE';
+const String example = 'EXAMPLE';

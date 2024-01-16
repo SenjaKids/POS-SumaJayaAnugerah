@@ -4,8 +4,14 @@ import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
 
 class SJAButton extends StatelessWidget {
   final String label;
+  final GestureTapCallback? onTap;
   final SJAButtonStyle? type;
-  const SJAButton({super.key, required this.label, this.type});
+  const SJAButton({
+    super.key,
+    required this.label,
+    this.type,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,17 +25,20 @@ class SJAButton extends StatelessWidget {
       color = AppColor.blue_2;
     }
 
-    return Container(
-      alignment: Alignment.center,
-      height: 42,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(8),
-      ),
-      width: double.maxFinite,
-      child: Text(
-        label,
-        style: SJATextStyle.subheadM(color: AppColor.white),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        alignment: Alignment.center,
+        height: 42,
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(8),
+        ),
+        width: double.maxFinite,
+        child: Text(
+          label,
+          style: SJATextStyle.subheadM(color: AppColor.white),
+        ),
       ),
     );
   }

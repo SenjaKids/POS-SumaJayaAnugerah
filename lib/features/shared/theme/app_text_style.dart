@@ -2,17 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
 
 class SJATextStyle {
-  // Color? color;
-
-  // AppTextStyle({this.color});
-
-  // static TextStyle titleL = TextStyle(
-  //   fontFamily: 'Poppins',
-  //   fontSize: 24,
-  //   fontWeight: FontWeight.w700,
-  //   color: color ?? AppColor.blue_1,
-  // );
-
   static TextStyle titleL({Color? color}) => TextStyle(
         fontFamily: 'Poppins',
         fontSize: 24,

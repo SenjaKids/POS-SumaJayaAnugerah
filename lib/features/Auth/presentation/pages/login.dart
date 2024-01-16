@@ -9,6 +9,10 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void validateLogin() {
+      Navigator.popAndPushNamed(context, '/nav-staff');
+    }
+
     return Scaffold(
       backgroundColor: AppColor.white,
       body: Center(
@@ -34,20 +38,23 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 64),
               //FORM LOGIN
-              const Column(
+              Column(
                 children: [
-                  SJATextField(
+                  const SJATextField(
                     variant: SJATextFieldType.iconInside,
                     label: 'Username',
                     prefixIcon: 'user',
                   ),
-                  SizedBox(height: 16),
-                  SJATextField(
+                  const SizedBox(height: 16),
+                  const SJATextField(
                     variant: SJATextFieldType.password,
                     label: 'Password',
                   ),
-                  SizedBox(height: 40),
-                  SJAButton(label: 'Masuk'),
+                  const SizedBox(height: 40),
+                  SJAButton(
+                    label: 'Masuk',
+                    onTap: () => validateLogin(),
+                  ),
                 ],
               ),
               const SizedBox(height: 64),
