@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:suma_jaya_anugerah/features/Orders/presentation/widgets/task_card.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
 import 'package:suma_jaya_anugerah/features/shared/widgets/sja_card.dart';
@@ -118,6 +119,13 @@ class HomeStaffPage extends StatelessWidget {
                             style: SJATextStyle.bodyS(color: AppColor.blue_2),
                           ),
                         ],
+                      ),
+                      const SizedBox(height: 12),
+                      const TaskCard(
+                        title: 'Pengelasan Besi 1029',
+                        subTitle: 'Deadline: 27 Feb 2024',
+                        description:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute',
                       ),
                       const SizedBox(height: 32),
                       Row(

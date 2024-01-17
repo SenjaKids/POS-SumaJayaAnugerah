@@ -4,7 +4,12 @@ import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
 
 class TaskCard extends StatelessWidget {
-  const TaskCard({super.key});
+  final String title, subTitle, description;
+  const TaskCard(
+      {super.key,
+      required this.title,
+      required this.subTitle,
+      required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +34,13 @@ class TaskCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Pengerjaan Tugas 0123',
+                      title,
                       style: SJATextStyle.titleS(),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                     ),
                     Text(
-                      'Deadline: 22 Nov 2019',
+                      subTitle,
                       style: SJATextStyle.bodyS(color: AppColor.grey_1),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
@@ -47,7 +52,7 @@ class TaskCard extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            description,
             style: SJATextStyle.bodyS(),
             maxLines: 3,
             overflow: TextOverflow.ellipsis,

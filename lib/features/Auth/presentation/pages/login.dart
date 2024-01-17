@@ -42,7 +42,7 @@ class LoginPage extends StatelessWidget {
                 children: [
                   const SJATextField(
                     variant: SJATextFieldType.iconInside,
-                    label: 'Username',
+                    label: 'Email',
                     prefixIcon: 'user',
                   ),
                   const SizedBox(height: 16),
