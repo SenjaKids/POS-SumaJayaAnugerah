@@ -23,7 +23,8 @@ class InventoryStaffPage extends StatelessWidget {
         children: List.generate(
           7,
           (index) => GestureDetector(
-            // onTap: () => Navigator.pushNamed(context, '/product-details'),
+            onTap: () =>
+                Navigator.pushNamed(context, '/inventory-details-staff'),
             child: const InventoryCard(),
           ),
         ),

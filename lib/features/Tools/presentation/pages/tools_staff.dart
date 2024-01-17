@@ -11,9 +11,7 @@ class ToolsStaffPage extends StatelessWidget {
     return SJAMenuPage(
       pageTitle: 'Alat Dipinjam',
       action1: 'add',
-      action2Ontap: () => print('b'),
       action1OnTap: () {
-        print('a');
         Navigator.pushNamed(context, '/tools-request-form');
       },
       content: Column(children: [

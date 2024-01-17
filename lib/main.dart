@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:suma_jaya_anugerah/App/nav_staff.dart';
 import 'package:suma_jaya_anugerah/features/Auth/presentation/pages/login.dart';
 import 'package:suma_jaya_anugerah/features/Auth/presentation/pages/splashscreen.dart';
+import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_details_staff.dart';
+import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_form.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/task_details_staff.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/task_report.dart';
 import 'package:suma_jaya_anugerah/features/Profile/presentation/pages/home_staff.dart';
@@ -37,6 +39,10 @@ class MainApp extends StatelessWidget {
               isDone: ModalRoute.of(context)!.settings.arguments as bool,
             ),
         '/task-report': (context) => const TaskReportPage(),
+        '/inventory-details-staff': (context) =>
+            const InventoryDetailsStaffPage(),
+        '/inventory-request-form': (context) =>
+            const InventoryRequestFormPage(),
       },
       theme: ThemeData(
         fontFamily: 'Poppins',

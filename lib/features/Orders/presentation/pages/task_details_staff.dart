@@ -50,7 +50,10 @@ class TaskDetailsStaffPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 6),
-                  Text('Saiful Jamiladi'),
+                  Text(
+                    'Saiful Jamiladi',
+                    style: SJATextStyle.bodyS(),
+                  ),
                 ],
               ),
               const SizedBox(height: 24),
