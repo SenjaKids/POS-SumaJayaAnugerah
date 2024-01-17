@@ -6,10 +6,12 @@ import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
 
 class SJATextField extends StatefulWidget {
   final String? label;
-  final String? prefixIcon;
+  final String? prefixIcon, suffixIcon;
   final SJATextFieldType? variant;
   final int? maxLines;
   final ValueChanged<String>? onChanged;
+  final Color? backgroundColor;
+  final String? hintText;
   const SJATextField({
     super.key,
     this.label,
@@ -17,6 +19,9 @@ class SJATextField extends StatefulWidget {
     this.prefixIcon,
     this.maxLines,
     this.onChanged,
+    this.backgroundColor,
+    this.hintText,
+    this.suffixIcon,
   });
 
   @override
@@ -54,6 +59,7 @@ class _SJATextFieldState extends State<SJATextField> {
             ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
+              color: widget.backgroundColor,
               border: Border.all(
                 width: 1,
                 strokeAlign: BorderSide.strokeAlignInside,
@@ -104,6 +110,7 @@ class _SJATextFieldState extends State<SJATextField> {
             ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
+              color: widget.backgroundColor,
               border: Border.all(
                 width: 1,
                 strokeAlign: BorderSide.strokeAlignInside,
@@ -204,6 +211,7 @@ class _SJATextFieldState extends State<SJATextField> {
                   strokeAlign: BorderSide.strokeAlignInside,
                   color: AppColor.grey_2,
                 ),
+                color: widget.backgroundColor,
               ),
               child: Row(
                 children: [
@@ -213,11 +221,12 @@ class _SJATextFieldState extends State<SJATextField> {
                             style: SJATextStyle.bodyS(),
                             maxLines: widget.maxLines ?? 1,
                             decoration: InputDecoration(
-                                isDense: true,
-                                border: InputBorder.none,
-                                hintStyle:
-                                    SJATextStyle.bodyS(color: AppColor.grey_1),
-                                hintText: '--'),
+                              isDense: true,
+                              border: InputBorder.none,
+                              hintStyle:
+                                  SJATextStyle.bodyS(color: AppColor.grey_1),
+                              hintText: widget.hintText ?? '--',
+                            ),
                             autocorrect: false,
                             enableSuggestions: false,
                             onChanged: widget.onChanged == null
@@ -235,6 +244,14 @@ class _SJATextFieldState extends State<SJATextField> {
                                     : null),
                           ),
                         ),
+                  const SizedBox(width: 8),
+                  widget.suffixIcon != null
+                      ? SvgPicture.asset(
+                          'assets/icons/ic-${widget.suffixIcon}.svg',
+                          width: 24,
+                          height: 24,
+                        )
+                      : const SizedBox(),
                 ],
               ),
             ),

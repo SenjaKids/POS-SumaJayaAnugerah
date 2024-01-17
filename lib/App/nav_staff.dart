@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_staff.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/tasks_staff.dart';
 import 'package:suma_jaya_anugerah/features/Profile/presentation/pages/home_staff.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_staff.dart';
@@ -19,7 +20,7 @@ class _NavStaffState extends State<NavStaff> {
     HomeStaffPage(),
     TasksStaffPage(),
     ToolsStaffPage(),
-    Placeholder(),
+    InventoryStaffPage(),
   ];
 
   @override
