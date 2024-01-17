@@ -6,6 +6,7 @@ import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
 class SJAMenuPage extends StatelessWidget {
   final String pageTitle;
   final String? action1, action2;
+  final GestureTapCallback? action1OnTap, action2Ontap;
   final Widget? content;
 
   const SJAMenuPage(
@@ -13,7 +14,9 @@ class SJAMenuPage extends StatelessWidget {
       required this.pageTitle,
       this.action1,
       this.action2,
-      required this.content});
+      required this.content,
+      this.action1OnTap,
+      this.action2Ontap});
 
   @override
   Widget build(BuildContext context) {
@@ -40,22 +43,28 @@ class SJAMenuPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         action2 != null
-                            ? SvgPicture.asset(
-                                'assets/icons/ic-$action2.svg',
-                                width: 24,
-                                height: 24,
-                                colorFilter: ColorFilter.mode(
-                                    AppColor.white, BlendMode.srcIn),
+                            ? GestureDetector(
+                                onTap: action2Ontap,
+                                child: SvgPicture.asset(
+                                  'assets/icons/ic-$action2.svg',
+                                  width: 24,
+                                  height: 24,
+                                  colorFilter: ColorFilter.mode(
+                                      AppColor.white, BlendMode.srcIn),
+                                ),
                               )
                             : const SizedBox(),
                         const SizedBox(width: 12),
                         action1 != null
-                            ? SvgPicture.asset(
-                                'assets/icons/ic-$action1.svg',
-                                width: 24,
-                                height: 24,
-                                colorFilter: ColorFilter.mode(
-                                    AppColor.white, BlendMode.srcIn),
+                            ? GestureDetector(
+                                onTap: action1OnTap,
+                                child: SvgPicture.asset(
+                                  'assets/icons/ic-$action1.svg',
+                                  width: 24,
+                                  height: 24,
+                                  colorFilter: ColorFilter.mode(
+                                      AppColor.white, BlendMode.srcIn),
+                                ),
                               )
                             : const SizedBox(),
                       ],

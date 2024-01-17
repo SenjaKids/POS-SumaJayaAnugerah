@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
@@ -14,6 +15,9 @@ class ToolsDetailsStaffPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(statusBarColor: AppColor.blue_2),
+    );
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +42,14 @@ class ToolsDetailsStaffPage extends StatelessWidget {
                   top: 16,
                   left: 0,
                   child: GestureDetector(
-                    onTap: () => Navigator.pop(context),
+                    onTap: () {
+                      Navigator.pop(context);
+
+                      SystemChrome.setSystemUIOverlayStyle(
+                        const SystemUiOverlayStyle(
+                            statusBarColor: Colors.transparent),
+                      );
+                    },
                     child: Container(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 16,
@@ -172,6 +183,11 @@ class ToolsDetailsStaffPage extends StatelessWidget {
                                 Navigator.popUntil(context, (route) {
                                   return count++ == 2;
                                 });
+
+                                SystemChrome.setSystemUIOverlayStyle(
+                                  const SystemUiOverlayStyle(
+                                      statusBarColor: Colors.transparent),
+                                );
                               }),
                         ),
                         label: 'Kembalikan',

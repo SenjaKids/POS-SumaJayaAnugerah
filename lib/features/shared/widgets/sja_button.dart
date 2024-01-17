@@ -26,7 +26,7 @@ class SJAButton extends StatelessWidget {
     }
 
     return GestureDetector(
-      onTap: onTap,
+      onTap: type == SJAButtonStyle.disabled ? null : onTap,
       child: Container(
         alignment: Alignment.center,
         height: 42,
