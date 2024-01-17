@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/tasks_staff.dart';
 import 'package:suma_jaya_anugerah/features/Profile/presentation/pages/home_staff.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_staff.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
@@ -16,7 +17,7 @@ class _NavStaffState extends State<NavStaff> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = [
     HomeStaffPage(),
-    Placeholder(),
+    TasksStaffPage(),
     ToolsStaffPage(),
     Placeholder(),
   ];

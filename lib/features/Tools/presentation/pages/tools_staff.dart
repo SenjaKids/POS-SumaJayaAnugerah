@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
 import 'package:suma_jaya_anugerah/features/shared/widgets/sja_card.dart';
 import 'package:suma_jaya_anugerah/features/shared/widgets/sja_menu_page.dart';
@@ -9,9 +8,6 @@ class ToolsStaffPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
-    );
     return SJAMenuPage(
       pageTitle: 'Alat Dipinjam',
       action1: 'add',
