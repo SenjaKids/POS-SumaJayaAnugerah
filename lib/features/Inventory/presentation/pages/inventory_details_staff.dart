@@ -212,8 +212,8 @@ class InventoryDetailsStaffPage extends StatelessWidget {
                 pageStatus != 2
                     ? SJAButton(
                         onTap: () {
-                          Navigator.pushNamed(
-                              context, '/inventory-request-form');
+                          Navigator.pushNamed(context,
+                              '/inventory-${pageStatus == 0 ? 'request' : 'return'}-form');
 
                           // SystemChrome.setSystemUIOverlayStyle(
                           //   SystemUiOverlayStyle(statusBarColor: AppColor.red),

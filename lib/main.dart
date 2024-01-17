@@ -5,6 +5,7 @@ import 'package:suma_jaya_anugerah/features/Auth/presentation/pages/splashscreen
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_details_staff.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_form.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_history.dart';
+import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_return_form.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/task_details_staff.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/task_report.dart';
 import 'package:suma_jaya_anugerah/features/Profile/presentation/pages/home_staff.dart';
@@ -46,6 +47,7 @@ class MainApp extends StatelessWidget {
             const InventoryRequestFormPage(),
         '/inventory-request-history': (context) =>
             const InventoryRequestHistoryPage(),
+        '/inventory-return-form': (context) => const InventoryReturnFormPage(),
       },
       theme: ThemeData(
         fontFamily: 'Poppins',
