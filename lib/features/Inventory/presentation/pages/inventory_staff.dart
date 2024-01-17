@@ -10,6 +10,8 @@ class InventoryStaffPage extends StatelessWidget {
     return SJAMenuPage(
       pageTitle: 'List Bahan',
       action1: 'history',
+      action1OnTap: () =>
+          Navigator.pushNamed(context, '/inventory-request-history'),
       enableSearch: true,
       hintText: 'Cari Bahan...',
       content: GridView.count(
@@ -23,8 +25,11 @@ class InventoryStaffPage extends StatelessWidget {
         children: List.generate(
           7,
           (index) => GestureDetector(
-            onTap: () =>
-                Navigator.pushNamed(context, '/inventory-details-staff'),
+            onTap: () => Navigator.pushNamed(
+              context,
+              '/inventory-details-staff',
+              arguments: 0,
+            ),
             child: const InventoryCard(),
           ),
         ),

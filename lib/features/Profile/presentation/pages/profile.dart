@@ -140,7 +140,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'saifuljamiladi@gmail.com',
+                    'staff@gmail.com',
                     style: SJATextStyle.bodyS(),
                   ),
                 ],

@@ -6,7 +6,8 @@ import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
 import 'package:suma_jaya_anugerah/features/shared/widgets/sja_button.dart';
 
 class InventoryDetailsStaffPage extends StatelessWidget {
-  const InventoryDetailsStaffPage({super.key});
+  final int pageStatus;
+  const InventoryDetailsStaffPage({super.key, required this.pageStatus});
 
   @override
   Widget build(BuildContext context) {
@@ -145,46 +146,98 @@ class InventoryDetailsStaffPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 8),
-                RichText(
-                  text: TextSpan(
-                    text: 'Sisa Stok: ',
-                    style: SJATextStyle.bodyM(color: AppColor.grey_1),
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: '10 Buah',
-                        style: SJATextStyle.titleS2(color: AppColor.blue_2),
-                      ),
-                    ],
-                  ),
-                ),
+                pageStatus == 0
+                    ? RichText(
+                        text: TextSpan(
+                          text: 'Sisa Stok: ',
+                          style: SJATextStyle.bodyM(color: AppColor.grey_1),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: '10 Buah',
+                              style:
+                                  SJATextStyle.titleS2(color: AppColor.blue_2),
+                            ),
+                          ],
+                        ),
+                      )
+                    : const SizedBox(),
+                pageStatus != 0
+                    ? RichText(
+                        text: TextSpan(
+                          text: 'Tanggal Pengajuan: ',
+                          style: SJATextStyle.bodyM(color: AppColor.grey_1),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: '22 Nov 2023',
+                              style:
+                                  SJATextStyle.titleS2(color: AppColor.blue_2),
+                            ),
+                          ],
+                        ),
+                      )
+                    : const SizedBox(),
+                pageStatus == 2
+                    ? RichText(
+                        text: TextSpan(
+                          text: 'Tanggal Pengembalian: ',
+                          style: SJATextStyle.bodyM(color: AppColor.grey_1),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: '23 Nov 2023',
+                              style:
+                                  SJATextStyle.titleS2(color: AppColor.blue_2),
+                            ),
+                          ],
+                        ),
+                      )
+                    : const SizedBox(),
+                pageStatus == 2
+                    ? RichText(
+                        text: TextSpan(
+                          text: 'Jumlah: ',
+                          style: SJATextStyle.bodyM(color: AppColor.grey_1),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: '2 Buah',
+                              style:
+                                  SJATextStyle.titleS2(color: AppColor.blue_2),
+                            ),
+                          ],
+                        ),
+                      )
+                    : const SizedBox(),
                 const SizedBox(
                   height: 48,
                 ),
-                SJAButton(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/inventory-request-form');
+                pageStatus != 2
+                    ? SJAButton(
+                        onTap: () {
+                          Navigator.pushNamed(
+                              context, '/inventory-request-form');
 
-                    // SystemChrome.setSystemUIOverlayStyle(
-                    //   SystemUiOverlayStyle(statusBarColor: AppColor.red),
-                    // );
-                  },
-                  // showDialog(
-                  //   context: context,
-                  //   builder: (context) => SJAPopUp(
-                  //       text: 'Apakah anda yakin ingin mengembalikan alat ini?',
-                  //       yaOnTap: () {
-                  //         int count = 0;
-                  //         Navigator.popUntil(context, (route) {
-                  //           return count++ == 2;
-                  //         });
-                  //         SystemChrome.setSystemUIOverlayStyle(
-                  //           const SystemUiOverlayStyle(
-                  //               statusBarColor: Colors.transparent),
-                  //         );
-                  //       }),
-                  // ),
-                  label: 'Pengajuan Bahan Baku',
-                ),
+                          // SystemChrome.setSystemUIOverlayStyle(
+                          //   SystemUiOverlayStyle(statusBarColor: AppColor.red),
+                          // );
+                        },
+                        // showDialog(
+                        //   context: context,
+                        //   builder: (context) => SJAPopUp(
+                        //       text: 'Apakah anda yakin ingin mengembalikan alat ini?',
+                        //       yaOnTap: () {
+                        //         int count = 0;
+                        //         Navigator.popUntil(context, (route) {
+                        //           return count++ == 2;
+                        //         });
+                        //         SystemChrome.setSystemUIOverlayStyle(
+                        //           const SystemUiOverlayStyle(
+                        //               statusBarColor: Colors.transparent),
+                        //         );
+                        //       }),
+                        // ),
+                        label:
+                            '${pageStatus == 0 ? 'Pengajuan' : 'Pengembalian'} Bahan Baku',
+                      )
+                    : const SizedBox(),
               ],
             ),
           )
