@@ -182,7 +182,12 @@ class TaskDetailsStaffPage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 48),
-              isDone ? const SizedBox() : const SJAButton(label: 'Selesai'),
+              isDone
+                  ? const SizedBox()
+                  : SJAButton(
+                      label: 'Selesai',
+                      onTap: () => Navigator.pushNamed(context, '/task-report'),
+                    ),
             ],
           ),
         ),
