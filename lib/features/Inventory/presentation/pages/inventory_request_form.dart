@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
@@ -66,6 +67,10 @@ class _InventoryRequestFormPageState extends State<InventoryRequestFormPage> {
                         'ketebalan: 3 mm',
                         style: SJATextStyle.bodyS(),
                       ),
+                      Text(
+                        'Sisa Stok: 10 buah',
+                        style: SJATextStyle.bodyS(),
+                      ),
                     ],
                   )
                 ],
@@ -77,6 +82,11 @@ class _InventoryRequestFormPageState extends State<InventoryRequestFormPage> {
                 onChanged: (value) => setState(() {
                   jumlah = value;
                 }),
+                suffixLabel: '/10',
+                inputFormatters: [
+                  FilteringTextInputFormatter.digitsOnly,
+                ],
+                keyboardType: TextInputType.number,
               ),
               const SizedBox(
                 height: 16,

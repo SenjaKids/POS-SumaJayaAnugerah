@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
 
 class SJATextField extends StatefulWidget {
-  final String? label;
+  final String? label, suffixLabel;
   final String? prefixIcon, suffixIcon;
   final SJATextFieldType? variant;
   final int? maxLines;
   final ValueChanged<String>? onChanged;
   final Color? backgroundColor;
   final String? hintText;
+  final List<TextInputFormatter>? inputFormatters;
+  final TextInputType? keyboardType;
   const SJATextField({
     super.key,
     this.label,
@@ -22,6 +25,9 @@ class SJATextField extends StatefulWidget {
     this.backgroundColor,
     this.hintText,
     this.suffixIcon,
+    this.suffixLabel,
+    this.inputFormatters,
+    this.keyboardType,
   });
 
   @override
@@ -218,8 +224,10 @@ class _SJATextFieldState extends State<SJATextField> {
                   widget.variant != SJATextFieldType.datepicker
                       ? Expanded(
                           child: TextField(
+                            inputFormatters: widget.inputFormatters,
                             style: SJATextStyle.bodyS(),
                             maxLines: widget.maxLines ?? 1,
+                            keyboardType: widget.keyboardType,
                             decoration: InputDecoration(
                               isDense: true,
                               border: InputBorder.none,
@@ -250,6 +258,12 @@ class _SJATextFieldState extends State<SJATextField> {
                           'assets/icons/ic-${widget.suffixIcon}.svg',
                           width: 24,
                           height: 24,
+                        )
+                      : const SizedBox(),
+                  widget.suffixLabel != null
+                      ? Text(
+                          widget.suffixLabel!,
+                          style: SJATextStyle.bodyS(color: AppColor.grey_1),
                         )
                       : const SizedBox(),
                 ],

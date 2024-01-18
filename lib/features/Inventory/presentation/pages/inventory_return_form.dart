@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
@@ -70,6 +71,10 @@ class _InventoryReturnFormPageState extends State<InventoryReturnFormPage> {
                         'Tanggal Pengajuan: 17 Nov 2023',
                         style: SJATextStyle.bodyS(),
                       ),
+                      Text(
+                        'Jumlah: 4 buah',
+                        style: SJATextStyle.bodyS(),
+                      ),
                     ],
                   )
                 ],
@@ -81,6 +86,11 @@ class _InventoryReturnFormPageState extends State<InventoryReturnFormPage> {
                 onChanged: (value) => setState(() {
                   jumlah = value;
                 }),
+                suffixLabel: '/4',
+                inputFormatters: [
+                  FilteringTextInputFormatter.digitsOnly,
+                ],
+                keyboardType: TextInputType.number,
               ),
               const SizedBox(
                 height: 16,
