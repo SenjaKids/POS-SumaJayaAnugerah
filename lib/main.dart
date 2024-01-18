@@ -7,10 +7,11 @@ import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/invento
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_form.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_history.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_return_form.dart';
+import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/create_order.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/task_details_staff.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/task_report.dart';
-import 'package:suma_jaya_anugerah/features/Profile/presentation/pages/home_staff.dart';
-import 'package:suma_jaya_anugerah/features/Profile/presentation/pages/profile.dart';
+import 'package:suma_jaya_anugerah/features/User/presentation/pages/home_staff.dart';
+import 'package:suma_jaya_anugerah/features/User/presentation/pages/profile.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_details_staff.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_request_form.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_staff.dart';
@@ -52,6 +53,7 @@ class MainApp extends StatelessWidget {
             const InventoryRequestHistoryPage(),
         '/inventory-return-form': (context) => const InventoryReturnFormPage(),
         '/nav-admin': (context) => const NavAdmin(),
+        '/create-order': (context) => const CreateOrderFormPage(),
       },
       theme: ThemeData(
         fontFamily: 'Poppins',

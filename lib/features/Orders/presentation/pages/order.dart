@@ -11,6 +11,7 @@ class OrderPage extends StatelessWidget {
     return SJAMenuPage(
       pageTitle: 'Pesanan',
       action1: 'add',
+      action1OnTap: () => Navigator.pushNamed(context, '/create-order'),
       enableSearch: true,
       hintText: 'Cari pesanan...',
       content: Column(
