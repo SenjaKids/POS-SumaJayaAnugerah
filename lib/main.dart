@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:suma_jaya_anugerah/App/nav_admin.dart';
 import 'package:suma_jaya_anugerah/App/nav_staff.dart';
 import 'package:suma_jaya_anugerah/features/Auth/presentation/pages/login.dart';
 import 'package:suma_jaya_anugerah/features/Auth/presentation/pages/splashscreen.dart';
@@ -25,13 +26,15 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      initialRoute: '/tools-details-staff',
+      initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreenPage(),
         '/login': (context) => const LoginPage(),
         '/nav-staff': (context) => const NavStaff(),
         '/home-staff': (context) => const HomeStaffPage(),
-        '/profile': (context) => const ProfilePage(),
+        '/profile': (context) => ProfilePage(
+              isAdmin: ModalRoute.of(context)!.settings.arguments as bool,
+            ),
         '/tools-staff': (context) => const ToolsStaffPage(),
         '/tools-details-staff': (context) => ToolsDetailsStaffPage(
               borrowStatus: ModalRoute.of(context)!.settings.arguments as int,
@@ -48,6 +51,7 @@ class MainApp extends StatelessWidget {
         '/inventory-request-history': (context) =>
             const InventoryRequestHistoryPage(),
         '/inventory-return-form': (context) => const InventoryReturnFormPage(),
+        '/nav-admin': (context) => const NavAdmin(),
       },
       theme: ThemeData(
         fontFamily: 'Poppins',

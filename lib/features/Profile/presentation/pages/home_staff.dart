@@ -42,8 +42,9 @@ class HomeStaffPage extends StatelessWidget {
                             style: SJATextStyle.titleM(color: AppColor.white),
                           ),
                           GestureDetector(
-                            onTap: () =>
-                                Navigator.pushNamed(context, '/profile'),
+                            onTap: () => Navigator.pushNamed(
+                                context, '/profile',
+                                arguments: false),
                             child: SvgPicture.asset(
                               'assets/icons/ic-user-filled.svg',
                               colorFilter: ColorFilter.mode(

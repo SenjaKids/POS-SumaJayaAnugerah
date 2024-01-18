@@ -6,7 +6,8 @@ import 'package:suma_jaya_anugerah/features/shared/widgets/sja_button.dart';
 import 'package:suma_jaya_anugerah/features/shared/widgets/sja_popup.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+  final bool isAdmin;
+  const ProfilePage({super.key, required this.isAdmin});
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +36,11 @@ class ProfilePage extends StatelessWidget {
               ),
               const SizedBox(height: 12),
               Text(
-                'Saiful Jamiladi',
+                isAdmin ? 'Maria Bella' : 'Saiful Jamiladi',
                 style: SJATextStyle.titleM(),
               ),
               Text(
-                'Tukang Las',
+                isAdmin ? 'Admin' : 'Tukang Las',
                 style: SJATextStyle.bodyS(color: AppColor.grey_1),
               ),
               const SizedBox(height: 36),
@@ -140,7 +141,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'staff@gmail.com',
+                    '${isAdmin ? 'admin' : 'staff'}@gmail.com',
                     style: SJATextStyle.bodyS(),
                   ),
                 ],

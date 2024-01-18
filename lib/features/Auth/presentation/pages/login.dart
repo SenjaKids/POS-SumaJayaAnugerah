@@ -4,13 +4,23 @@ import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
 import 'package:suma_jaya_anugerah/features/shared/widgets/sja_button.dart';
 import 'package:suma_jaya_anugerah/features/shared/widgets/sja_textfield.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
   @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  String email = '';
+  @override
   Widget build(BuildContext context) {
     void validateLogin() {
-      Navigator.popAndPushNamed(context, '/nav-staff');
+      if (email == "staff@gmail.com") {
+        Navigator.popAndPushNamed(context, '/nav-staff');
+      } else if (email == "admin@gmail.com") {
+        Navigator.popAndPushNamed(context, '/nav-admin');
+      } else {}
     }
 
     return Scaffold(
@@ -40,10 +50,13 @@ class LoginPage extends StatelessWidget {
               //FORM LOGIN
               Column(
                 children: [
-                  const SJATextField(
+                  SJATextField(
                     variant: SJATextFieldType.iconInside,
                     label: 'Email',
                     prefixIcon: 'user',
+                    onChanged: (value) => setState(() {
+                      email = value;
+                    }),
                   ),
                   const SizedBox(height: 16),
                   const SJATextField(

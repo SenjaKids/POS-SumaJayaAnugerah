@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:suma_jaya_anugerah/features/Inventory/presentation/widgets/inventory_card.dart';
+import 'package:suma_jaya_anugerah/features/Catalog/presentation/widgets/catalog_card.dart';
 import 'package:suma_jaya_anugerah/features/shared/widgets/sja_menu_page.dart';
 
-class InventoryStaffPage extends StatelessWidget {
-  const InventoryStaffPage({super.key});
+class CatalogPage extends StatelessWidget {
+  const CatalogPage({super.key});
 
-  // SystemChrome.setSystemUIOverlayStyle(
-  //   const SystemUiOverlayStyle(
-  //       statusBarColor: Colors.transparent),
-  // );
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
@@ -21,16 +17,17 @@ class InventoryStaffPage extends StatelessWidget {
         statusBarIconBrightness: Brightness.light,
       ),
       child: SJAMenuPage(
-        pageTitle: 'List Bahan',
-        action1: 'history',
+        pageTitle: 'PT. Suma Jaya Anugerah',
+        action1: 'user-filled',
+        action2: 'add',
         action1OnTap: () =>
-            Navigator.pushNamed(context, '/inventory-request-history'),
+            Navigator.pushNamed(context, '/profile', arguments: true),
         enableSearch: true,
-        hintText: 'Cari Bahan...',
+        hintText: 'Cari Proyek...',
         content: GridView.count(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
-          childAspectRatio: (1 * 0.8),
+          childAspectRatio: (1 * 0.85),
           padding: EdgeInsets.zero,
           crossAxisCount: 2,
           crossAxisSpacing: 16,
@@ -43,7 +40,7 @@ class InventoryStaffPage extends StatelessWidget {
                 '/inventory-details-staff',
                 arguments: 0,
               ),
-              child: const InventoryCard(),
+              child: const CatalogCard(),
             ),
           ),
         ),

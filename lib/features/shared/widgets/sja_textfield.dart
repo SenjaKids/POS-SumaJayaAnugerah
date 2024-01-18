@@ -91,6 +91,9 @@ class _SJATextFieldState extends State<SJATextField> {
                     ),
                     autocorrect: false,
                     enableSuggestions: false,
+                    onChanged: widget.onChanged == null
+                        ? null
+                        : (value) => widget.onChanged!(value),
                   ),
                 ),
               ],
