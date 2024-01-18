@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:suma_jaya_anugerah/features/Catalog/presentation/pages/catalog.dart';
+import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/order.dart';
+import 'package:suma_jaya_anugerah/features/User/presentation/pages/staff.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
 
@@ -15,8 +17,8 @@ class _NavAdminState extends State<NavAdmin> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = [
     CatalogPage(),
-    Placeholder(),
-    Placeholder(),
+    StaffPage(),
+    OrderPage(),
     Placeholder(),
     Placeholder(),
   ];

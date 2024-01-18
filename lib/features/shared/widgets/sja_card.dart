@@ -48,7 +48,7 @@ class SJACard extends StatelessWidget {
                   ),
                 )
               : const SizedBox(),
-          const SizedBox(width: 8),
+          SizedBox(width: image != null ? 8 : 0),
           Expanded(
             child: Column(
               children: [
