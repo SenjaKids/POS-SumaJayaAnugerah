@@ -3,6 +3,7 @@ import 'package:suma_jaya_anugerah/App/nav_admin.dart';
 import 'package:suma_jaya_anugerah/App/nav_staff.dart';
 import 'package:suma_jaya_anugerah/features/Auth/presentation/pages/login.dart';
 import 'package:suma_jaya_anugerah/features/Auth/presentation/pages/splashscreen.dart';
+import 'package:suma_jaya_anugerah/features/Catalog/presentation/pages/create_catalog.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_details_staff.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_form.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_history.dart';
@@ -54,6 +55,7 @@ class MainApp extends StatelessWidget {
         '/inventory-return-form': (context) => const InventoryReturnFormPage(),
         '/nav-admin': (context) => const NavAdmin(),
         '/create-order': (context) => const CreateOrderFormPage(),
+        '/create-catalog': (context) => const CreateCatalogFormPage(),
       },
       theme: ThemeData(
         fontFamily: 'Poppins',

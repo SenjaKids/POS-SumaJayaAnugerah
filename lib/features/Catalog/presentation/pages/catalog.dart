@@ -22,6 +22,7 @@ class CatalogPage extends StatelessWidget {
         action2: 'add',
         action1OnTap: () =>
             Navigator.pushNamed(context, '/profile', arguments: true),
+        action2Ontap: () => Navigator.pushNamed(context, '/create-catalog'),
         enableSearch: true,
         hintText: 'Cari Proyek...',
         content: GridView.count(
