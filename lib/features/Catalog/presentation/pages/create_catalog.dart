@@ -37,13 +37,26 @@ class _CreateCatalogFormPageState extends State<CreateCatalogFormPage> {
                 children: [
                   AspectRatio(
                     aspectRatio: 5 / 3.5,
-                    child: Image.asset(
-                      'assets/images/default-picture.png',
-                      width: double.maxFinite,
-                      fit: BoxFit.cover,
+                    child: pickedImage != null
+                        ? Image.file(
+                            pickedImage!,
+                            fit: BoxFit.cover,
+                          )
+                        : Image.asset(
+                            'assets/images/default-picture.png',
+                            width: double.maxFinite,
+                            fit: BoxFit.cover,
+                          ),
+                  ),
+                  AspectRatio(
+                    aspectRatio: 5 / 3.5,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: AppColor.white
+                            .withOpacity(pickedImage != null ? .6 : 0),
+                      ),
                     ),
                   ),
-                  const SizedBox(width: 12),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -146,7 +159,7 @@ class _CreateCatalogFormPageState extends State<CreateCatalogFormPage> {
 
   Future pickImage() async {
     try {
-      // print('picking image');
+      print('picking image');
       final image = await ImagePicker().pickImage(source: ImageSource.gallery);
       // print('image');
       if (image == null) return;
