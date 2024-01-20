@@ -38,7 +38,7 @@ class CatalogPage extends StatelessWidget {
             (index) => GestureDetector(
               onTap: () => Navigator.pushNamed(
                 context,
-                '/inventory-details-staff',
+                '/catalog-detail',
                 arguments: 0,
               ),
               child: const CatalogCard(),
