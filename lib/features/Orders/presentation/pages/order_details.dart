@@ -126,7 +126,8 @@ class OrderDetailsPage extends StatelessWidget {
                       isDone
                           ? const SizedBox()
                           : GestureDetector(
-                              // onTap: () => ,
+                              onTap: () =>
+                                  Navigator.pushNamed(context, '/create-task'),
                               child: SvgPicture.asset(
                                 'assets/icons/ic-add.svg',
                                 width: 24,
@@ -136,11 +137,13 @@ class OrderDetailsPage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
-                  SJACard(
-                    title: 'Tugas 1: Pembuatan Bagian A',
-                    description: 'Deadline: 12 Jan 2024',
-                    bottomLabel: isDone ? 'Selesai' : 'Belum Dimulai',
-                    bottomLabelColor: isDone ? AppColor.blue_3 : AppColor.red,
+                  GestureDetector(
+                    child: SJACard(
+                      title: 'Tugas 1: Pembuatan Bagian A',
+                      description: 'Deadline: 12 Jan 2024',
+                      bottomLabel: isDone ? 'Selesai' : 'Belum Dimulai',
+                      bottomLabelColor: isDone ? AppColor.blue_3 : AppColor.red,
+                    ),
                   ),
                   const SizedBox(height: 8),
                   SJACard(
