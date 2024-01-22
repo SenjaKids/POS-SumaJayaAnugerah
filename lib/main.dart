@@ -13,6 +13,7 @@ import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/invento
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/create_order.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/task_details_staff.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/task_report.dart';
+import 'package:suma_jaya_anugerah/features/User/presentation/pages/create_staff.dart';
 import 'package:suma_jaya_anugerah/features/User/presentation/pages/home_staff.dart';
 import 'package:suma_jaya_anugerah/features/User/presentation/pages/profile.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_details_staff.dart';
@@ -62,6 +63,7 @@ class MainApp extends StatelessWidget {
         '/catalog-detail': (context) => const CatalogDetailPage(),
         '/edit-catalog': (context) => const EditCatalogFormPage(),
         '/staff-detail': (context) => const StaffDetailPage(),
+        '/create-staff': (context) => const CreateStaffFormPage(),
       },
       theme: ThemeData(
         fontFamily: 'Poppins',

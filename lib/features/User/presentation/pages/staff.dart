@@ -10,6 +10,7 @@ class StaffPage extends StatelessWidget {
     return SJAMenuPage(
       pageTitle: 'Staff',
       action1: 'add',
+      action1OnTap: () => Navigator.pushNamed(context, '/create-staff'),
       enableSearch: true,
       hintText: 'Cari nama staff...',
       content: ListView.separated(
