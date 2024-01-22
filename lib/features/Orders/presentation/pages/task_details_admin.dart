@@ -182,7 +182,7 @@ class TaskDetailsAdminPage extends StatelessWidget {
                           ? const SizedBox()
                           : GestureDetector(
                               onTap: () =>
-                                  Navigator.pushNamed(context, '/create-task'),
+                                  Navigator.pushNamed(context, '/assign-task'),
                               child: SvgPicture.asset(
                                 'assets/icons/ic-add.svg',
                                 width: 24,

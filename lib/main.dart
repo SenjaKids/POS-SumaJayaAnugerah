@@ -10,6 +10,7 @@ import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/invento
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_form.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_history.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_return_form.dart';
+import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/assign_task.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/create_order.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/create_task.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/order_details.dart';
@@ -72,6 +73,7 @@ class MainApp extends StatelessWidget {
         '/create-task': (context) => const CreateTaskFormPage(),
         '/task-details-admin': (context) => TaskDetailsAdminPage(
             isDone: ModalRoute.of(context)!.settings.arguments as bool),
+        '/assign-task': (context) => const AssignTaskPage(),
       },
       theme: ThemeData(
         fontFamily: 'Poppins',
