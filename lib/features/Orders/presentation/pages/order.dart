@@ -16,25 +16,37 @@ class OrderPage extends StatelessWidget {
       hintText: 'Cari pesanan...',
       content: Column(
         children: [
-          SJACard(
-            title: 'Pembuatan besi baja untuk meja besi bang irawan',
-            bottomLabel: 'Belum Dimulai',
-            bottomLabelColor: AppColor.red,
-            description: 'ORD3200013',
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, '/order-details',
+                arguments: false),
+            child: SJACard(
+              title: 'Pembuatan besi baja untuk meja besi bang irawan',
+              bottomLabel: 'Belum Dimulai',
+              bottomLabelColor: AppColor.red,
+              description: 'ORD3200013',
+            ),
           ),
           const SizedBox(height: 8),
-          SJACard(
-            title: 'Pesanan bu karta',
-            bottomLabel: 'Dikerjakan',
-            bottomLabelColor: AppColor.yellow,
-            description: 'ORD32D00013',
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, '/order-details',
+                arguments: false),
+            child: SJACard(
+              title: 'Pesanan bu karta',
+              bottomLabel: 'Dikerjakan',
+              bottomLabelColor: AppColor.yellow,
+              description: 'ORD32D00013',
+            ),
           ),
           const SizedBox(height: 8),
-          SJACard(
-            title: 'Pelapisan Kayu mapple12',
-            bottomLabel: 'Selesai',
-            bottomLabelColor: AppColor.blue_3,
-            description: 'ORD3200013',
+          GestureDetector(
+            onTap: () =>
+                Navigator.pushNamed(context, '/order-details', arguments: true),
+            child: SJACard(
+              title: 'Pelapisan Kayu mapple12',
+              bottomLabel: 'Selesai',
+              bottomLabelColor: AppColor.blue_3,
+              description: 'ORD3200013',
+            ),
           ),
         ],
       ),

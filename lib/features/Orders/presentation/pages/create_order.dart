@@ -68,7 +68,7 @@ class _CreateOrderFormPageState extends State<CreateOrderFormPage> {
                 height: 64,
               ),
               SJAButton(
-                label: 'Ajukan Peminjaman',
+                label: 'Simpan',
                 type: (toolName == '' ||
                         clientName == '' ||
                         deskripsi == '' ||
