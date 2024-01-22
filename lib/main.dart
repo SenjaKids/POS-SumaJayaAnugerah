@@ -5,6 +5,7 @@ import 'package:suma_jaya_anugerah/features/Auth/presentation/pages/login.dart';
 import 'package:suma_jaya_anugerah/features/Auth/presentation/pages/splashscreen.dart';
 import 'package:suma_jaya_anugerah/features/Catalog/presentation/pages/catalog_detail.dart';
 import 'package:suma_jaya_anugerah/features/Catalog/presentation/pages/create_catalog.dart';
+import 'package:suma_jaya_anugerah/features/Catalog/presentation/pages/edit_catalog.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_details_staff.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_form.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_history.dart';
@@ -58,6 +59,7 @@ class MainApp extends StatelessWidget {
         '/create-order': (context) => const CreateOrderFormPage(),
         '/create-catalog': (context) => const CreateCatalogFormPage(),
         '/catalog-detail': (context) => const CatalogDetailPage(),
+        '/edit-catalog': (context) => const EditCatalogFormPage(),
       },
       theme: ThemeData(
         fontFamily: 'Poppins',

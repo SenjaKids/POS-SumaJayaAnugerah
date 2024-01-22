@@ -8,6 +8,7 @@ import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
 class SJATextField extends StatefulWidget {
   final String? label, suffixLabel;
   final String? prefixIcon, suffixIcon;
+  final String? initialValue;
   final SJATextFieldType? variant;
   final int? maxLines;
   final ValueChanged<String>? onChanged;
@@ -28,6 +29,7 @@ class SJATextField extends StatefulWidget {
     this.suffixLabel,
     this.inputFormatters,
     this.keyboardType,
+    this.initialValue,
   });
 
   @override
@@ -37,6 +39,13 @@ class SJATextField extends StatefulWidget {
 class _SJATextFieldState extends State<SJATextField> {
   bool showPassword = false;
   String datePickerValue = '--';
+  late TextEditingController _controller;
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController(text: widget.initialValue ?? '');
+  }
+
   @override
   Widget build(BuildContext context) {
     late Widget textfield;
@@ -163,7 +172,6 @@ class _SJATextFieldState extends State<SJATextField> {
         ],
       );
     } else {
-      //TODO: INSIDE ICON TEXTFIELD VARIANT
       textfield = Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -238,6 +246,7 @@ class _SJATextFieldState extends State<SJATextField> {
                                   SJATextStyle.bodyS(color: AppColor.grey_1),
                               hintText: widget.hintText ?? '--',
                             ),
+                            controller: _controller,
                             autocorrect: false,
                             enableSuggestions: false,
                             onChanged: widget.onChanged == null

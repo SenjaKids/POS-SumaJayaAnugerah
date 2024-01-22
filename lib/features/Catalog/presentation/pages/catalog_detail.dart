@@ -70,7 +70,7 @@ class _CatalogDetailPageState extends State<CatalogDetailPage> {
       actions: [
         GestureDetector(
           onTap: () {
-            // Navigator.pop(context);
+            Navigator.pushNamed(context, '/edit-catalog');
           },
           child: Padding(
             padding: const EdgeInsets.only(right: 20),
