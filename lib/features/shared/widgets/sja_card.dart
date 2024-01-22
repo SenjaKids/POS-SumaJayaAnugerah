@@ -79,7 +79,9 @@ class SJACard extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
-                    const SizedBox(width: 4),
+                    description != null
+                        ? const SizedBox(width: 4)
+                        : const SizedBox(),
                     bottomLabel != null
                         ? SJALabel(
                             text: bottomLabel!,

@@ -138,6 +138,9 @@ class OrderDetailsPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   GestureDetector(
+                    onTap: () => Navigator.pushNamed(
+                        context, '/task-details-admin',
+                        arguments: isDone),
                     child: SJACard(
                       title: 'Tugas 1: Pembuatan Bagian A',
                       description: 'Deadline: 12 Jan 2024',
@@ -146,12 +149,17 @@ class OrderDetailsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 8),
-                  SJACard(
-                    title: 'Tugas 2: Pembuatan Bagian B',
-                    description: 'Deadline: 14 Jan 2024',
-                    bottomLabel: isDone ? 'Selesai' : 'Dikerjakan',
-                    bottomLabelColor:
-                        isDone ? AppColor.blue_3 : AppColor.yellow,
+                  GestureDetector(
+                    onTap: () => Navigator.pushNamed(
+                        context, '/task-details-admin',
+                        arguments: isDone),
+                    child: SJACard(
+                      title: 'Tugas 2: Pembuatan Bagian B',
+                      description: 'Deadline: 14 Jan 2024',
+                      bottomLabel: isDone ? 'Selesai' : 'Dikerjakan',
+                      bottomLabelColor:
+                          isDone ? AppColor.blue_3 : AppColor.yellow,
+                    ),
                   ),
                 ],
               ),
