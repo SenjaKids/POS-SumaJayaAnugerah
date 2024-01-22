@@ -18,6 +18,7 @@ import 'package:suma_jaya_anugerah/features/User/presentation/pages/profile.dart
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_details_staff.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_request_form.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_staff.dart';
+import 'package:suma_jaya_anugerah/features/User/presentation/pages/staff_detail.dart';
 
 void main() {
   runApp(const MainApp());
@@ -60,6 +61,7 @@ class MainApp extends StatelessWidget {
         '/create-catalog': (context) => const CreateCatalogFormPage(),
         '/catalog-detail': (context) => const CatalogDetailPage(),
         '/edit-catalog': (context) => const EditCatalogFormPage(),
+        '/staff-detail': (context) => const StaffDetailPage(),
       },
       theme: ThemeData(
         fontFamily: 'Poppins',

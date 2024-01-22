@@ -15,11 +15,14 @@ class StaffPage extends StatelessWidget {
       content: ListView.separated(
           padding: EdgeInsets.zero,
           shrinkWrap: true,
-          itemBuilder: (context, index) => const SJACard(
-                title: 'Saiful Jamiladi',
-                image: 'default-picture.png',
-                imageBorderRadius: 100,
-                description: 'Tukang Las',
+          itemBuilder: (context, index) => GestureDetector(
+                onTap: () => Navigator.pushNamed(context, '/staff-detail'),
+                child: const SJACard(
+                  title: 'Saiful Jamiladi',
+                  image: 'default-picture.png',
+                  imageBorderRadius: 100,
+                  description: 'Tukang Las',
+                ),
               ),
           separatorBuilder: (context, index) => const SizedBox(height: 8),
           itemCount: 3),
