@@ -8,9 +8,9 @@ class ToolsAdminPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
-    );
+    // SystemChrome.setSystemUIOverlayStyle(
+    //   const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+    // );
     return AnnotatedRegion(
       value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -36,11 +36,10 @@ class ToolsAdminPage extends StatelessWidget {
           children: List.generate(
             11,
             (index) => GestureDetector(
-              // onTap: () => Navigator.pushNamed(
-              //   context,
-              //   '/catalog-detail',
-              //   arguments: 0,
-              // ),
+              onTap: () => Navigator.pushNamed(
+                context,
+                '/tools-details-admin',
+              ),
               child: const ToolCard(),
             ),
           ),
