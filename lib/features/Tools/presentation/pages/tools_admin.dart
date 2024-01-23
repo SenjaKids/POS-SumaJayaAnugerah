@@ -21,8 +21,7 @@ class ToolsAdminPage extends StatelessWidget {
         action1: 'add',
         action2: 'history',
         action3: 'notification',
-        // action1OnTap: () =>
-        //     Navigator.pushNamed(context, '/profile', arguments: true),
+        action1OnTap: () => Navigator.pushNamed(context, '/create-tool'),
         // action2Ontap: () => Navigator.pushNamed(context, '/create-catalog'),
         enableSearch: true,
         hintText: 'Cari Peralatan...',

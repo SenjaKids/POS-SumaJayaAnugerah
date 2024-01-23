@@ -123,7 +123,7 @@ class _CreateStaffFormPageState extends State<CreateStaffFormPage> {
                   SJATextField(
                     label: 'No. Telepon',
                     prefixIcon: 'phone',
-                    keyboardType: TextInputType.number,
+                    keyboardType: TextInputType.phone,
                     onChanged: (value) => setState(() {
                       phone = value;
                     }),
