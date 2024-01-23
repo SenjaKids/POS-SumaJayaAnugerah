@@ -22,6 +22,7 @@ import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/create_tool
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/edit_tool.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_details_admin.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_request.dart';
+import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_request_details.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_request_history.dart';
 import 'package:suma_jaya_anugerah/features/User/presentation/pages/create_staff.dart';
 import 'package:suma_jaya_anugerah/features/User/presentation/pages/home_staff.dart';
@@ -87,6 +88,9 @@ class MainApp extends StatelessWidget {
         '/tools-details-admin': (context) => const ToolsDetailsAdminPage(),
         '/tools-request': (context) => const ToolsRequestPage(),
         '/tools-request-history': (context) => const ToolsRequestHistoryPage(),
+        '/tools-request-details': (context) => ToolsRequestDetailsPage(
+              status: ModalRoute.of(context)!.settings.arguments as int,
+            ),
       },
       theme: ThemeData(
         fontFamily: 'Poppins',

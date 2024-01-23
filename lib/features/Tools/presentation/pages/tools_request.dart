@@ -18,7 +18,9 @@ class ToolsRequestPage extends StatelessWidget {
               padding: EdgeInsets.zero,
               shrinkWrap: true,
               itemBuilder: (context, index) => GestureDetector(
-                    // onTap: () => Navigator.pushNamed(context, '/staff-detail'),
+                    onTap: () => Navigator.pushNamed(
+                        context, '/tools-request-details',
+                        arguments: 0),
                     child: const SJACard(
                       title: 'Bor Makita',
                       image: 'default-picture.png',
