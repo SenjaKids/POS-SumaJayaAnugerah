@@ -6,8 +6,8 @@ import 'package:suma_jaya_anugerah/features/shared/widgets/sja_textfield.dart';
 
 class SJAMenuPage extends StatelessWidget {
   final String pageTitle;
-  final String? action1, action2;
-  final GestureTapCallback? action1OnTap, action2Ontap;
+  final String? action1, action2, action3;
+  final GestureTapCallback? action1OnTap, action2Ontap, action3Ontap;
   final bool? enableSearch;
   final Widget? content;
   final String? hintText;
@@ -21,7 +21,9 @@ class SJAMenuPage extends StatelessWidget {
       this.action1OnTap,
       this.action2Ontap,
       this.enableSearch,
-      this.hintText});
+      this.hintText,
+      this.action3,
+      this.action3Ontap});
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +49,19 @@ class SJAMenuPage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
+                        action3 != null
+                            ? GestureDetector(
+                                onTap: action3Ontap,
+                                child: SvgPicture.asset(
+                                  'assets/icons/ic-$action3.svg',
+                                  width: 24,
+                                  height: 24,
+                                  colorFilter: ColorFilter.mode(
+                                      AppColor.white, BlendMode.srcIn),
+                                ),
+                              )
+                            : const SizedBox(),
+                        const SizedBox(width: 12),
                         action2 != null
                             ? GestureDetector(
                                 onTap: action2Ontap,
