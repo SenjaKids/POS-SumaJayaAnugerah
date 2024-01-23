@@ -170,7 +170,7 @@ class ToolsDetailsAdminPage extends StatelessWidget {
                       height: 48,
                     ),
                     SJAButton(
-                      // onTap: () => ,
+                      onTap: () => Navigator.pushNamed(context, '/edit-tool'),
                       label: 'Ubah Data',
                     ),
                     const SizedBox(height: 16),

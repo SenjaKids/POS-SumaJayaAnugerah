@@ -19,6 +19,7 @@ import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/task_detai
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/task_details_staff.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/task_report.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/create_tool.dart';
+import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/edit_tool.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_details_admin.dart';
 import 'package:suma_jaya_anugerah/features/User/presentation/pages/create_staff.dart';
 import 'package:suma_jaya_anugerah/features/User/presentation/pages/home_staff.dart';
@@ -80,6 +81,7 @@ class MainApp extends StatelessWidget {
         '/assign-task-details': (context) => AssignTaskDetailsPage(
             isDone: ModalRoute.of(context)!.settings.arguments as bool),
         '/create-tool': (context) => const CreateToolFormPage(),
+        '/edit-tool': (context) => const EditToolFormPage(),
         '/tools-details-admin': (context) => const ToolsDetailsAdminPage(),
       },
       theme: ThemeData(
