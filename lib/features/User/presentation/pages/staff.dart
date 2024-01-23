@@ -20,7 +20,7 @@ class StaffPage extends StatelessWidget {
                 onTap: () => Navigator.pushNamed(context, '/staff-detail'),
                 child: const SJACard(
                   title: 'Saiful Jamiladi',
-                  image: 'default-picture.png',
+                  image: 'default-profile.png',
                   imageBorderRadius: 100,
                   description: 'Tukang Las',
                 ),

@@ -22,7 +22,7 @@ class ToolsAdminPage extends StatelessWidget {
         action2: 'history',
         action3: 'notification',
         action1OnTap: () => Navigator.pushNamed(context, '/create-tool'),
-        // action2Ontap: () => Navigator.pushNamed(context, '/create-catalog'),
+        action3Ontap: () => Navigator.pushNamed(context, '/tools-request'),
         enableSearch: true,
         hintText: 'Cari Peralatan...',
         content: GridView.count(
