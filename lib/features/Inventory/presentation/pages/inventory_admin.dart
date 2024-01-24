@@ -23,7 +23,7 @@ class InventoryAdminPage extends StatelessWidget {
         action3: 'notification',
         action1OnTap: () => Navigator.pushNamed(context, '/create-inventory'),
         action2Ontap: () =>
-            Navigator.pushNamed(context, '/inventory-request-history'),
+            Navigator.pushNamed(context, '/inventory-request-history-admin'),
         action3Ontap: () => Navigator.pushNamed(context, '/inventory-request'),
         enableSearch: true,
         hintText: 'Cari Bahan...',
