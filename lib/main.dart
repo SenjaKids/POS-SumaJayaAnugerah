@@ -7,6 +7,7 @@ import 'package:suma_jaya_anugerah/features/Catalog/presentation/pages/catalog_d
 import 'package:suma_jaya_anugerah/features/Catalog/presentation/pages/create_catalog.dart';
 import 'package:suma_jaya_anugerah/features/Catalog/presentation/pages/edit_catalog.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/create_inventory.dart';
+import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/edit_inventory.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_detail_admin.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_details_staff.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_form.dart';
@@ -96,6 +97,7 @@ class MainApp extends StatelessWidget {
         '/inventory-details-admin': (context) =>
             const InventoryDetailsAdminPage(),
         '/create-inventory': (context) => const CreateInventoryFormPage(),
+        '/edit-inventory': (context) => const EditInventoryFormPage(),
       },
       theme: ThemeData(
         fontFamily: 'Poppins',
