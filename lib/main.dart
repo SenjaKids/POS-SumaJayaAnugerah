@@ -11,6 +11,7 @@ import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/edit_in
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_detail_admin.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_details_staff.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request.dart';
+import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_detail.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_form.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_history.dart';
 import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_request_history_admin.dart';
@@ -103,6 +104,9 @@ class MainApp extends StatelessWidget {
         '/inventory-request': (context) => const InventoryRequestPage(),
         '/inventory-request-history-admin': (context) =>
             const InventoryRequestHistoryAdminPage(),
+        '/inventory-request-details': (context) => InventoryRequestDetailsPage(
+              status: ModalRoute.of(context)!.settings.arguments as int,
+            ),
       },
       theme: ThemeData(
         fontFamily: 'Poppins',
