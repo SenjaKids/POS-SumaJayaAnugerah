@@ -4,7 +4,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_text_style.dart';
 import 'package:suma_jaya_anugerah/features/shared/widgets/sja_button.dart';
-import 'package:suma_jaya_anugerah/features/shared/widgets/sja_card.dart';
 import 'package:suma_jaya_anugerah/features/shared/widgets/sja_popup.dart';
 
 class InventoryDetailsAdminPage extends StatelessWidget {
@@ -169,7 +168,8 @@ class InventoryDetailsAdminPage extends StatelessWidget {
                       height: 48,
                     ),
                     SJAButton(
-                      // onTap: () => Navigator.pushNamed(context, '/edit-tool'),
+                      onTap: () =>
+                          Navigator.pushNamed(context, '/edit-inventory'),
                       label: 'Ubah Data',
                     ),
                     const SizedBox(height: 16),

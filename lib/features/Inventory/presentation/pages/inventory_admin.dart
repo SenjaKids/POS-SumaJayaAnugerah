@@ -21,7 +21,7 @@ class InventoryAdminPage extends StatelessWidget {
         action1: 'add',
         action2: 'history',
         action3: 'notification',
-        // action1OnTap: () => Navigator.pushNamed(context, '/create-tool'),
+        action1OnTap: () => Navigator.pushNamed(context, '/create-inventory'),
         // action2Ontap: () =>
         //     Navigator.pushNamed(context, '/tools-request-history'),
         // action3Ontap: () => Navigator.pushNamed(context, '/tools-request'),
