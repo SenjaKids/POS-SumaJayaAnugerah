@@ -1,3 +1,3 @@
-# suma_jaya_anugerah
+# Suma Jaya Anugerah App
 
-A new Flutter project.
+Point of Sales app for PT. Suma Jaya Anugerah.
