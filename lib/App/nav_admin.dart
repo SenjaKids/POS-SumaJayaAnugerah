@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:suma_jaya_anugerah/features/Catalog/presentation/pages/catalog.dart';
+import 'package:suma_jaya_anugerah/features/Inventory/presentation/pages/inventory_admin.dart';
 import 'package:suma_jaya_anugerah/features/Orders/presentation/pages/order.dart';
 import 'package:suma_jaya_anugerah/features/Tools/presentation/pages/tools_admin.dart';
 import 'package:suma_jaya_anugerah/features/User/presentation/pages/staff.dart';
@@ -21,7 +22,7 @@ class _NavAdminState extends State<NavAdmin> {
     StaffPage(),
     OrderPage(),
     ToolsAdminPage(),
-    Placeholder(),
+    InventoryAdminPage(),
   ];
 
   @override
