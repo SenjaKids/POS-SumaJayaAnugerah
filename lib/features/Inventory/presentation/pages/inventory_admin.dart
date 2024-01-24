@@ -22,9 +22,9 @@ class InventoryAdminPage extends StatelessWidget {
         action2: 'history',
         action3: 'notification',
         action1OnTap: () => Navigator.pushNamed(context, '/create-inventory'),
-        // action2Ontap: () =>
-        //     Navigator.pushNamed(context, '/tools-request-history'),
-        // action3Ontap: () => Navigator.pushNamed(context, '/tools-request'),
+        action2Ontap: () =>
+            Navigator.pushNamed(context, '/inventory-request-history'),
+        action3Ontap: () => Navigator.pushNamed(context, '/inventory-request'),
         enableSearch: true,
         hintText: 'Cari Bahan...',
         content: GridView.count(
