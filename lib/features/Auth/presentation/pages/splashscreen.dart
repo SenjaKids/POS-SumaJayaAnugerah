@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:suma_jaya_anugerah/features/shared/theme/app_color.dart';
 
 class SplashScreenPage extends StatefulWidget {
@@ -14,7 +13,7 @@ class SplashScreenPage extends StatefulWidget {
 class _SplashScreenPageState extends State<SplashScreenPage> {
   @override
   void initState() {
-    // _setTimer();
+    _setTimer();
     super.initState();
   }
 
@@ -23,22 +22,22 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     return Scaffold(
       backgroundColor: AppColor.white,
       body: Center(
-        child:
-            // Image.asset(
-            //   'assets/images/logo.png',
-            //   width: 120,
-            //   height: 120,
-            // ),
-            SvgPicture.asset(
-          'assets/images/logo.svg',
+        child: Image.asset(
+          'assets/images/logo.png',
+          width: 250,
+          height: 250,
         ),
+        //   SvgPicture.asset(
+        // 'assets/images/logo.svg',
+        // width: 120,
+        // ),
       ),
     );
   }
 
   void _setTimer() {
     Timer(
-      const Duration(seconds: 4),
+      const Duration(seconds: 3),
       () {
         Navigator.popAndPushNamed(context, '/login');
       },
